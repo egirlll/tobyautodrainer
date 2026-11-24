@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Toby's Auto-Drain",
-  "version": "2.0.1",
+  "version": "3.2.1",
   "description": "Auto-drain extension for Toby's Throne",
   "permissions": [
     "tabs",
