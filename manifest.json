@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Toby's Auto-Drain",
+  "version": "2.0.1",
+  "description": "Auto-drain extension for Toby's Throne",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "storage",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://throne.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_title": "Toby's Auto-Drain~",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://throne.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
